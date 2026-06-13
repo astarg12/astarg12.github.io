@@ -182,6 +182,7 @@ button:focus-visible {
 .tile {
   width: 100%;
   padding: 80px 32px;
+  scroll-margin-top: 96px;
 }
 
 .tile-light {
@@ -388,7 +389,7 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -537,8 +538,22 @@ h3 {
     font-size: 17px;
   }
 
+  .sub-nav-actions {
+    display: none;
+  }
+
   .tile {
     padding: 48px 20px;
+  }
+
+  .hero-copy,
+  .lead,
+  .actions {
+    max-width: 340px;
+  }
+
+  .actions {
+    width: 100%;
   }
 
   h1 {

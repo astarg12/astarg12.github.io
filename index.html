@@ -14,119 +14,144 @@
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="global-nav" aria-label="Primary navigation">
         <a class="brand" href="#" aria-label="astarg12 home">astarg12</a>
-        <ul class="nav-links">
+        <ul class="global-links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="sub-nav" aria-label="Section navigation">
+        <a class="sub-nav-title" href="#">Personal Website</a>
+        <div class="sub-nav-actions">
+          <a href="#work">Selected Work</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="assets/cv.pdf">CV</a>
+        </div>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Personal Website</p>
-          <h1 id="intro-title">Hi, I&apos;m astarg12.</h1>
-          <p class="intro">
-            I build practical software, study technical systems, and keep notes
-            on projects that connect thoughtful design with reliable
-            engineering.
-          </p>
-          <div class="actions" aria-label="Primary links">
-            <a class="button primary" href="#work">View Work</a>
-            <a class="button secondary" href="assets/cv.pdf">Download CV</a>
+      <section class="tile tile-light hero" aria-labelledby="intro-title">
+        <div class="tile-inner hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Personal Website</p>
+            <h1 id="intro-title">Hi, I&apos;m astarg12.</h1>
+            <p class="lead">
+              I build practical software, study technical systems, and keep
+              notes on projects that connect thoughtful design with reliable
+              engineering.
+            </p>
+            <div class="actions" aria-label="Primary links">
+              <a class="button primary" href="#work">View Work</a>
+              <a class="button secondary" href="assets/cv.pdf">Download CV</a>
+            </div>
+          </div>
+          <figure class="portrait-frame">
+            <img
+              src="assets/profile.jpg"
+              alt="Portrait of astarg12"
+              width="900"
+              height="900"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="tile tile-dark" aria-labelledby="about-title">
+        <div class="tile-inner split">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">Focused on useful, maintainable work.</h2>
+          </div>
+          <div class="copy-block">
+            <p>
+              This site is a simple home for professional information, current
+              interests, and selected projects. It is built as a lightweight
+              static page that runs directly on GitHub Pages.
+            </p>
+            <p>
+              The goal is to keep the page direct, readable, and easy to update
+              as new work, writing, and experience are ready to share.
+            </p>
           </div>
         </div>
-        <figure class="profile-card">
-          <img
-            src="assets/profile.jpg"
-            alt="Portrait of astarg12"
-            width="900"
-            height="900"
-          >
-        </figure>
       </section>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Focused on useful, maintainable work.</h2>
-        </div>
-        <div class="section-content">
-          <p>
-            This site is a simple home for professional information, current
-            interests, and selected projects. It is built as a lightweight
-            static page that runs directly on GitHub Pages.
-          </p>
-          <p>
-            The goal is to keep the page direct, readable, and easy to update as
-            new work, writing, and experience are ready to share.
-          </p>
-        </div>
-      </section>
-
-      <section id="work" class="section" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2 id="work-title">Projects and areas of interest.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project">
-            <h3>Software Projects</h3>
-            <p>
-              Practical tools and experiments focused on clear implementation,
-              maintainable code, and useful interfaces.
-            </p>
-          </article>
-          <article class="project">
-            <h3>Research and Writing</h3>
-            <p>
-              Notes, coursework, and longer-form writing about technical topics,
-              systems, and lessons from projects.
-            </p>
-          </article>
-          <article class="project">
-            <h3>Experience</h3>
-            <p>
-              Professional, academic, and collaborative work collected in one
-              place for quick reference.
-            </p>
-          </article>
+      <section id="work" class="tile tile-parchment" aria-labelledby="work-title">
+        <div class="tile-inner stacked">
+          <div class="section-heading">
+            <p class="eyebrow">Selected Work</p>
+            <h2 id="work-title">Projects and areas of interest.</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="project-kicker">Software</p>
+              <h3>Software Projects</h3>
+              <p>
+                Practical tools and experiments focused on clear implementation,
+                maintainable code, and useful interfaces.
+              </p>
+              <a href="#contact">Discuss work</a>
+            </article>
+            <article class="project-card">
+              <p class="project-kicker">Writing</p>
+              <h3>Research and Writing</h3>
+              <p>
+                Notes, coursework, and longer-form writing about technical
+                topics, systems, and lessons from projects.
+              </p>
+              <a href="#contact">Get in touch</a>
+            </article>
+            <article class="project-card">
+              <p class="project-kicker">Reference</p>
+              <h3>Experience</h3>
+              <p>
+                Professional, academic, and collaborative work collected in one
+                place for quick reference.
+              </p>
+              <a href="assets/cv.pdf">Open CV</a>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="cv" class="section callout" aria-labelledby="cv-title">
-        <div>
+      <section id="cv" class="tile tile-dark tile-dark-alt" aria-labelledby="cv-title">
+        <div class="tile-inner centered">
           <p class="eyebrow">CV / Resume</p>
           <h2 id="cv-title">A current CV is available as a PDF.</h2>
-          <p>
+          <p class="lead">
             Use the link below for a downloadable copy of the current CV.
           </p>
+          <a class="button primary" href="assets/cv.pdf">Open CV</a>
         </div>
-        <a class="button primary" href="assets/cv.pdf">Open CV</a>
       </section>
 
-      <section id="contact" class="section" aria-labelledby="contact-title">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Find me online.</h2>
+      <section id="contact" class="tile tile-light contact" aria-labelledby="contact-title">
+        <div class="tile-inner split">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Find me online.</h2>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <a href="https://github.com/astarg12">GitHub</a>
+            </li>
+            <li>
+              <a href="assets/cv.pdf">CV PDF</a>
+            </li>
+          </ul>
         </div>
-        <ul class="contact-list">
-          <li>
-            <a href="https://github.com/astarg12">GitHub</a>
-          </li>
-          <li>
-            <a href="assets/cv.pdf">CV PDF</a>
-          </li>
-        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 astarg12. Built for GitHub Pages.</p>
+      <div class="footer-inner">
+        <p>&copy; 2026 astarg12. Built for GitHub Pages.</p>
+        <a href="#">Back to top</a>
+      </div>
     </footer>
   </body>
 </html>

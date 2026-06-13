@@ -387,9 +387,19 @@ h3 {
   margin: 0 auto;
 }
 
+.section-heading-wide h2 {
+  max-width: 18ch;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -420,6 +430,10 @@ h3 {
   line-height: 1.47;
 }
 
+.course-card p {
+  margin-top: 14px;
+}
+
 .centered {
   max-width: 760px;
   text-align: center;
@@ -433,6 +447,69 @@ h3 {
 
 .centered .button {
   margin-top: 32px;
+}
+
+.cv-summary,
+.ai-usage-list {
+  margin: 32px 0 0;
+  padding: 0;
+}
+
+.cv-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+.cv-summary div,
+.ai-usage-list div {
+  min-width: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.cv-summary dt,
+.ai-usage-list dt {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+}
+
+.cv-summary dt {
+  color: var(--primary-on-dark);
+}
+
+.cv-summary dd,
+.ai-usage-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.cv-summary dd {
+  color: var(--body-muted);
+}
+
+.ai-usage-inner {
+  align-items: start;
+}
+
+.ai-usage-list {
+  display: grid;
+  gap: 20px;
+}
+
+.ai-usage-list div {
+  border-top-color: var(--hairline);
+}
+
+.ai-usage-list dt {
+  color: var(--ink-soft);
+}
+
+.ai-usage-list dd {
+  color: var(--ink-muted);
 }
 
 .contact-list {
@@ -522,15 +599,37 @@ h3 {
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cv-summary {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
   .global-nav {
+    height: auto;
     justify-content: center;
     padding: 0 16px;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .global-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .global-links::-webkit-scrollbar {
     display: none;
   }
 
@@ -572,6 +671,10 @@ h3 {
   .button,
   .contact-list a {
     width: 100%;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
